@@ -29,11 +29,9 @@ function arestasTemProjecao(aresta1, aresta2) {
   const coord3 = estaVertical ? ponto3[1] : ponto3[0];
   const coord4 = estaVertical ? ponto4[1] : ponto4[0];
 
-  return Math.min(coord1, coord2) <= Math.min(coord3, coord4) &&
-    Math.max(coord1, coord2) > Math.min(coord3, coord4)
+  return coord1 <= coord4 && coord2 > coord4
     ? true
-    : Math.min(coord1, coord2) < Math.max(coord3, coord4) &&
-      Math.max(coord1, coord2) >= Math.max(coord3, coord4)
+    : coord1 > coord4 && coord1 < coord3
     ? true
     : false;
 }
