@@ -43,7 +43,7 @@ function calculaMenorDistancia(pontos) {
   let menorDistancia = Infinity;
   let aresta1 = [];
   let aresta2 = [];
-  for (let i = 0; i <= arestas.length / 2; i++) {
+  for (let i = 0; i <= arestas.length; i++) {
     for (let j = i + 2; j < arestas.length; j++) {
       const temProjecao = arestasTemProjecao(arestas[i], arestas[j]);
       if (temProjecao) {
