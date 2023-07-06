@@ -3,7 +3,7 @@
 ## Premissas
 
 - o polígono é fechado
-- as arestas estão na posição vertical ou horizontal, ou seja 90º o 0º com relação ao eixo x
+- as arestas estão na posição vertical ou horizontal, ou seja 90º ou 0º com relação ao eixo x
 - os ângulos formados entre as arestas são múltiplos de 90 ou zero (0º, 90º, 180º, 270º)
 - os pontos informados devem formar um polígono válido de acordo com as premissas informadas
 
