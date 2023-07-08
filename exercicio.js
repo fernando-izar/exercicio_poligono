@@ -29,9 +29,10 @@ function arestasTemProjecao(aresta1, aresta2) {
   const coord3 = estaVertical ? ponto3[1] : ponto3[0];
   const coord4 = estaVertical ? ponto4[1] : ponto4[0];
 
-  return coord1 <= coord4 && coord2 > coord4
-    ? true
-    : coord1 > coord4 && coord1 < coord3
+  return (coord1 <= coord4 && coord2 > coord4) ||
+    (coord1 > coord4 && coord1 < coord3) ||
+    (coord1 >= coord4 && coord2 < coord4) ||
+    (coord1 < coord4 && coord1 > coord3)
     ? true
     : false;
 }
@@ -59,13 +60,40 @@ function calculaMenorDistancia(pontos) {
   return `A menor distância é ${menorDistancia} entre as arestas ${aresta1Str} e ${aresta2Str}`;
 }
 
-const pontosHexagono = [
+const pontosHexagonoQuadrante1 = [
   [1, 1],
   [1, 3],
-  [7, 3],
-  [7, 2],
-  [4, 2],
+  [3, 3],
+  [3, 7],
+  [4, 7],
   [4, 1],
+];
+
+const pontosHexagonoQuadrante2 = [
+  [-1, 1],
+  [-1, 3],
+  [-3, 3],
+  [-3, 7],
+  [-4, 7],
+  [-4, 1],
+];
+
+const pontosHexagonoQuadrante3 = [
+  [-1, -1],
+  [-1, -3],
+  [-3, -3],
+  [-3, -7],
+  [-4, -7],
+  [-4, -1],
+];
+
+const pontosHexagonoQuadrante4 = [
+  [1, -1],
+  [1, -3],
+  [3, -3],
+  [3, -7],
+  [4, -7],
+  [4, -1],
 ];
 
 const pontosOctogono = [
@@ -109,8 +137,22 @@ const pontosHexadecagono = [
   [7, 0],
 ];
 
-const resultadoHexagono = calculaMenorDistancia(pontosHexagono);
-console.log(resultadoHexagono);
+const resultadoHexagonoQuadrante1 = calculaMenorDistancia(
+  pontosHexagonoQuadrante1
+);
+console.log(resultadoHexagonoQuadrante1);
+const resultadoHexagonoQuadrante2 = calculaMenorDistancia(
+  pontosHexagonoQuadrante2
+);
+console.log(resultadoHexagonoQuadrante2);
+const resultadoHexagonoQuadrante3 = calculaMenorDistancia(
+  pontosHexagonoQuadrante3
+);
+console.log(resultadoHexagonoQuadrante3);
+const resultadoHexagonoQuadrante4 = calculaMenorDistancia(
+  pontosHexagonoQuadrante4
+);
+console.log(resultadoHexagonoQuadrante4);
 const resultadoOctogono = calculaMenorDistancia(pontosOctogono);
 console.log(resultadoOctogono);
 const resultadoOctogono2 = calculaMenorDistancia(pontosOctogono2);
