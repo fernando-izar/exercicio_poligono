@@ -30,9 +30,7 @@ function arestasTemProjecao(aresta1, aresta2) {
   const coord4 = estaVertical ? ponto4[1] : ponto4[0];
 
   return (coord1 <= coord4 && coord2 > coord4) ||
-    (coord1 > coord4 && coord1 < coord3) ||
-    (coord1 >= coord4 && coord2 < coord4) ||
-    (coord1 < coord4 && coord1 > coord3)
+    (coord1 > coord4 && coord1 < coord3)
     ? true
     : false;
 }
@@ -60,64 +58,6 @@ function calculaMenorDistancia(pontos) {
   return `A menor distância é ${menorDistancia} entre as arestas ${aresta1Str} e ${aresta2Str}`;
 }
 
-const pontosHexagonoQuadrante1 = [
-  [1, 1],
-  [1, 3],
-  [3, 3],
-  [3, 7],
-  [4, 7],
-  [4, 1],
-];
-
-const pontosHexagonoQuadrante2 = [
-  [-1, 1],
-  [-1, 3],
-  [-3, 3],
-  [-3, 7],
-  [-4, 7],
-  [-4, 1],
-];
-
-const pontosHexagonoQuadrante3 = [
-  [-1, -1],
-  [-1, -3],
-  [-3, -3],
-  [-3, -7],
-  [-4, -7],
-  [-4, -1],
-];
-
-const pontosHexagonoQuadrante4 = [
-  [1, -1],
-  [1, -3],
-  [3, -3],
-  [3, -7],
-  [4, -7],
-  [4, -1],
-];
-
-const pontosOctogono = [
-  [0, 0],
-  [0, 2],
-  [2, 2],
-  [2, 4],
-  [4, 4],
-  [4, 2],
-  [6, 2],
-  [6, 0],
-];
-
-const pontosOctogono2 = [
-  [0, 0],
-  [0, 5],
-  [5, 5],
-  [5, 4],
-  [2, 4],
-  [2, 2],
-  [7, 2],
-  [7, 0],
-];
-
 const pontosHexadecagono = [
   [0, 0],
   [0, 3],
@@ -137,25 +77,5 @@ const pontosHexadecagono = [
   [7, 0],
 ];
 
-const resultadoHexagonoQuadrante1 = calculaMenorDistancia(
-  pontosHexagonoQuadrante1
-);
-console.log(resultadoHexagonoQuadrante1);
-const resultadoHexagonoQuadrante2 = calculaMenorDistancia(
-  pontosHexagonoQuadrante2
-);
-console.log(resultadoHexagonoQuadrante2);
-const resultadoHexagonoQuadrante3 = calculaMenorDistancia(
-  pontosHexagonoQuadrante3
-);
-console.log(resultadoHexagonoQuadrante3);
-const resultadoHexagonoQuadrante4 = calculaMenorDistancia(
-  pontosHexagonoQuadrante4
-);
-console.log(resultadoHexagonoQuadrante4);
-const resultadoOctogono = calculaMenorDistancia(pontosOctogono);
-console.log(resultadoOctogono);
-const resultadoOctogono2 = calculaMenorDistancia(pontosOctogono2);
-console.log(resultadoOctogono2);
 const resultadoHexadecagono = calculaMenorDistancia(pontosHexadecagono);
 console.log(resultadoHexadecagono);
