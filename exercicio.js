@@ -59,6 +59,15 @@ function calculaMenorDistancia(pontos) {
   return `A menor distância é ${menorDistancia} entre as arestas ${aresta1Str} e ${aresta2Str}`;
 }
 
+const pontosHexagono = [
+  [1, 1],
+  [1, 3],
+  [7, 3],
+  [7, 2],
+  [4, 2],
+  [4, 1],
+];
+
 const pontosOctogono = [
   [0, 0],
   [0, 2],
@@ -68,6 +77,17 @@ const pontosOctogono = [
   [4, 2],
   [6, 2],
   [6, 0],
+];
+
+const pontosOctogono2 = [
+  [0, 0],
+  [0, 5],
+  [5, 5],
+  [5, 4],
+  [2, 4],
+  [2, 2],
+  [7, 2],
+  [7, 0],
 ];
 
 const pontosHexadecagono = [
@@ -89,7 +109,11 @@ const pontosHexadecagono = [
   [7, 0],
 ];
 
+const resultadoHexagono = calculaMenorDistancia(pontosHexagono);
+console.log(resultadoHexagono);
 const resultadoOctogono = calculaMenorDistancia(pontosOctogono);
 console.log(resultadoOctogono);
+const resultadoOctogono2 = calculaMenorDistancia(pontosOctogono2);
+console.log(resultadoOctogono2);
 const resultadoHexadecagono = calculaMenorDistancia(pontosHexadecagono);
 console.log(resultadoHexadecagono);
