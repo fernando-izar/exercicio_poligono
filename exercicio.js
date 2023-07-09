@@ -204,24 +204,31 @@ const pontosHexadecagono2 = [
 const resultadoHexagonoQuadrante1 = calculaMenorDistancia(
   pontosHexagonoQuadrante1
 );
-console.log(resultadoHexagonoQuadrante1);
+console.log("\n HexadecagonoQuadrante1 : \n", resultadoHexagonoQuadrante1);
+
 const resultadoHexagonoQuadrante2 = calculaMenorDistancia(
   pontosHexagonoQuadrante2
 );
-console.log(resultadoHexagonoQuadrante2);
+console.log("\n HexadecagonoQuadrante2 : \n", resultadoHexagonoQuadrante2);
+
 const resultadoHexagonoQuadrante3 = calculaMenorDistancia(
   pontosHexagonoQuadrante3
 );
-console.log(resultadoHexagonoQuadrante3);
+console.log("\n HexadecagonoQuadrante3 : \n", resultadoHexagonoQuadrante3);
+
 const resultadoHexagonoQuadrante4 = calculaMenorDistancia(
   pontosHexagonoQuadrante4
 );
-console.log(resultadoHexagonoQuadrante4);
+console.log("\n HexadecagonoQuadrante4 : \n", resultadoHexagonoQuadrante4);
+
 const resultadoOctogono = calculaMenorDistancia(pontosOctogono);
-console.log(resultadoOctogono);
+console.log("\n Octogono : \n", resultadoOctogono);
+
 const resultadoOctogono2 = calculaMenorDistancia(pontosOctogono2);
-console.log(resultadoOctogono2);
+console.log("\n Octonogo2 : \n", resultadoOctogono2);
+
 const resultadoHexadecagono = calculaMenorDistancia(pontosHexadecagono);
-console.log(resultadoHexadecagono);
+console.log("\n Hexadecagono : \n", resultadoHexadecagono);
+
 const resultadoHexadecagono2 = calculaMenorDistancia(pontosHexadecagono2);
-console.log(resultadoHexadecagono2);
+console.log("\n Hexadecagono2 : \n", resultadoHexadecagono2);
