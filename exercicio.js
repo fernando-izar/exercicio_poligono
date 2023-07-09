@@ -80,7 +80,7 @@ function calculaMenorDistancia(pontos) {
   let aresta1 = [];
   let aresta2 = [];
   for (let i = 0; i <= arestas.length; i++) {
-    for (let j = i + 2; j < arestas.length; j++) {
+    for (let j = i + 2; j < arestas.length; j = j + 2) {
       const temProjecao = arestasTemProjecao(arestas[i], arestas[j]);
       if (temProjecao) {
         const pontoCentral = calculaPontoCentralDoQuadrilatero([
@@ -89,6 +89,7 @@ function calculaMenorDistancia(pontos) {
           arestas[j].ponto1,
           arestas[j].ponto2,
         ]);
+
         if (pontoEstaDentroDoPoligono(pontoCentral, pontos)) {
           const distancia = distanciaEntreArestas(arestas[i], arestas[j]);
           if (distancia < menorDistancia) {
@@ -201,6 +202,27 @@ const pontosHexadecagono2 = [
   [6, 5],
 ];
 
+const pontosOctodecagono = [
+  [-8, -10],
+  [-8, -7],
+  [-6, -7],
+  [-6, 10],
+  [-3, 10],
+  [-3, 8],
+  [1, 8],
+  [1, 6],
+  [10, 6],
+  [10, 4],
+  [7, 4],
+  [7, 3],
+  [9, 3],
+  [9, -2],
+  [3, -2],
+  [3, 2],
+  [2, 2],
+  [2, -10],
+];
+
 const resultadoHexagonoQuadrante1 = calculaMenorDistancia(
   pontosHexagonoQuadrante1
 );
@@ -232,3 +254,6 @@ console.log("\n Hexadecagono : \n", resultadoHexadecagono);
 
 const resultadoHexadecagono2 = calculaMenorDistancia(pontosHexadecagono2);
 console.log("\n Hexadecagono2 : \n", resultadoHexadecagono2);
+
+const resultadoOctodecagono = calculaMenorDistancia(pontosOctodecagono);
+console.log("\n Octodecagono : \n", resultadoOctodecagono);
