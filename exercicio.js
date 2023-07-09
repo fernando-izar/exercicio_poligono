@@ -202,7 +202,7 @@ const pontosHexadecagono2 = [
   [6, 5],
 ];
 
-const pontosOctodecagono = [
+const pontosOctadecagono = [
   [-8, -10],
   [-8, -7],
   [-6, -7],
@@ -255,5 +255,5 @@ console.log("\n Hexadecagono : \n", resultadoHexadecagono);
 const resultadoHexadecagono2 = calculaMenorDistancia(pontosHexadecagono2);
 console.log("\n Hexadecagono2 : \n", resultadoHexadecagono2);
 
-const resultadoOctodecagono = calculaMenorDistancia(pontosOctodecagono);
-console.log("\n Octodecagono : \n", resultadoOctodecagono);
+const resultadoOctadecagono = calculaMenorDistancia(pontosOctadecagono);
+console.log("\n Octadecagono : \n", resultadoOctadecagono);
