@@ -11,5 +11,5 @@
 
 - fazer o clone do repositório
 - verificar se possui o node instalado
-- escolher os pontos respeitando as premissas (no código estão sendo executados exemplo de hexágonos, octógonos e hexadecágonos, o anexo na pasta static representa o hexadecágono2)
+- escolher os pontos respeitando as premissas (no código estão sendo executados exemplo de hexágonos, octógonos, hexadecágonos e octadecágono; o anexo na pasta static representa o hexadecágono2)
 - rodar o código (node exercicio.js)
